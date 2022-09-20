@@ -35,10 +35,10 @@ else:
         try:
             with ftplib.FTP() as s:
                 s.connect(ip, 21)
-                print("[x] {}:{}".format(usr,i))
+                print("[*] {}:{}".format(usr,i))
                 s.login(usr, pwd)
         except ftplib.error_perm:
-            print("")
+            print("[X] {}:{}".format(usr,i))
         else:
-            print("{}:{} ;)".format(usr,i))
+            print("[+] {}:{}".format(usr,i))
 
